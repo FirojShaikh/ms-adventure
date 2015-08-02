@@ -1,0 +1,283 @@
+body,
+.section.courses,
+.section-all-course,
+.section-instructors,
+.section-recent-posts,
+.section-iconbox,
+.page-about .advantages-tabs ul.menu-tab li,
+.page-member .advantages-tabs ul.menu-tab li {
+	background-color: #656565 !important;
+}
+
+.courses-tabs .content-tab .content-inner .text-tab ul li,
+.courses-tabs .content-tab .content-inner .text-tab ul li:last-child {
+	border-color: #656565;
+}
+
+.about-us ul li,
+.about-us ul li:last-child {
+	border-color: rgba(0,0,0, .1);
+}
+
+.comment-respond input[type="text"]:focus, 
+.comment-respond textarea:focus, 
+.comment-respond input[type="email"]:focus {
+  box-shadow: 0 -2px 0 #1ba3c2 inset;
+}
+
+.btn-besmart,
+#contactform #submit,
+.instructors .toggle-title.active,
+.advantages-tabs ul.menu-tab li.active,
+.btn-besmart.btn-trans:after,
+#courses-search-form .submit-wrap .btn-besmart:hover,
+#contactform .submit-wrap .btn-besmart:hover,
+.btn-color-gray:after,
+.btn-besmart:hover,
+.switcher-container h2 a.sw-click,
+.switcher-container,
+.block-loader,
+.ui-datepicker-header,
+.post .featured-post .post-format li.date,
+.pagination ul li.pre, 
+.pagination ul li.next {
+	background-color: #1ba3c2 !important;
+}
+
+#contactform input[type="text"]:focus, 
+#contactform textarea:focus, 
+#contactform input[type="email"]:focus {
+	box-shadow: 0 -2px 0 #1ba3c2 inset;
+}
+
+#courses-search-form .submit-wrap .btn-besmart:hover,
+#contactform .submit-wrap .btn-besmart:hover,
+.roll-carousel.courses-carousel .owl-controls .owl-nav .owl-prev:hover, 
+.roll-carousel.courses-carousel .owl-controls .owl-nav .owl-next:hover, 
+.roll-carousel.recent-carousel .owl-controls .owl-nav .owl-prev:hover, 
+.roll-carousel.recent-carousel .owl-controls .owl-nav .owl-next:hover,
+.gallery-carousel .owl-controls .owl-nav .owl-prev:hover, 
+.gallery-carousel .owl-controls .owl-nav .owl-next:hover,
+.pagination ul li.active,
+.roll-project .project-filter li.active a {
+	border-color: #1ba3c2;
+}
+
+.btn-besmart.btn-trans {
+	background-color: transparent !important;
+}
+
+.courses-tabs .menu-tab li a:hover, 
+.courses-tabs .menu-tab li.active a,
+.courses-tabs .content-tab .content-inner .text-tab ul li:before,
+.roll-carousel.courses-carousel .text-courses .detail-courses .like:before,
+.about-us ul li:before,
+.color-theme,
+.roll-counter .wrap-numb span,
+.recent-carousel .title-post h4 .vote:before,
+.popular-courses .popular-courses-item .title-popular-courses a:hover,
+.infomation h1.phone,
+.list-tiwtter a, 
+.list-tiwtter .at,
+.besmart-icon-box h2,
+#mainnav .submenu li > a:hover, 
+#mainnav > ul > li > a:hover, 
+#mainnav > ul > li.active > a,
+.top ul li a:hover,
+.testimonials.v2 blockquote:before, 
+.testimonials.v2 blockquote:after,
+.content-slider h1.sub-title .st-color,
+.roll-carousel.courses-carousel .text-courses h4 a:hover,
+.recent-carousel .wrap-item a:hover,
+.roll-carousel.courses-carousel .text-courses h4:hover a,
+.about-us ul li a:hover,
+.top-search a,
+.page-title .page-title-wrap h1,
+.page-title .breadcrumbs ul li a:hover,
+.post .meta-post li a:hover, 
+.post .title-post a:hover,
+.post .meta-post li:before,
+.widget.widget-tag .tag-list a:hover,
+.widget.widget-search #searchform #searchsubmit,
+.widget.widget-categories ul li:before, 
+.widget.widget-archive ul li:before,
+.widget ul li a:hover,
+.widget.widget-popular-news .popular-news li .text p,
+.testimonials.v1 blockquote:after,
+.ui-state-highlight, 
+.ui-widget-content .ui-state-highlight,
+.author-post .text .position,
+.besmart-socials li a:hover,
+.comments-area .reply a:hover,
+.comments-area .reply .comment-reply-link:before,
+.pagination ul li.active a, 
+.pagination ul li:hover a,
+.event-post .content-post ul.meta-post li a:hover,
+.event-post .content-post ul.meta-post li:before,
+.event-post .content-post h2 a:hover,
+.event-page-single .meta-post li:before,
+.roll-project .project-filter li.active a, 
+.roll-project .project-filter li:hover a,
+.roll-project.gallery-extended .item-wrap .project-text h6,
+.gallery-item h6.sub-title,
+.error404 .number,
+.contact-infomation li:before,
+.roll-project.full-width .project-item h6 a:hover {
+	color: #1ba3c2 !important;
+}
+
+.courses-tabs,
+.roll-carousel.courses-carousel .item,
+.instructors .toggle-content,
+.advantages-tabs .content-tab,
+.section-testimonial,
+.section-promotion,
+.section-popular-courses,
+.bottom {
+	background-color: #5b5b5b;
+}
+
+.courses-tabs .menu-tab li {
+	color: #808080;
+}
+
+.courses-tabs .menu-tab li.active,
+.roll-carousel.courses-carousel .text-courses h4 a,
+.promotion h3,
+.popular-courses .title-box h3,
+.courses-tabs .content-tab .content-inner .text-tab h3,
+.courses-tabs .content-tab .content-inner .text-tab ul li,
+.courses-tabs,
+.roll-carousel.courses-carousel .item,
+.instructors .toggle-content,
+.title-box h2,
+.instructors .toggle-content .info h6,
+.instructors .toggle-content .info .desc-info,
+.instructors .toggle-title.active:after,
+.instructors h3,
+.about-us h3,
+.advantages-tabs h3,
+.about-us ul li a,
+.advantages-tabs ul.menu-tab li.active a,
+.instructors .toggle-title.active:after,
+.instructors .toggle-title.active,
+.advantages-tabs ul.menu-tab li.active,
+.btn-color-gray:hover,
+.besmart-icon-box span,
+.besmart-icon-box .btn-besmart.btn-color-gray:hover,
+.page-about .advantages-tabs ul.menu-tab li a,
+.page-member .advantages-tabs ul.menu-tab li a,
+.advantages-tabs.tabs-box .content-inner h6,
+.testimonials.v2 blockquote {
+	color: #fff;
+}
+
+.form-search .overlay,
+.besmart-icon-box .btn-besmart,
+.instructors .toggle-title,
+.advantages-tabs ul.menu-tab li,
+.besmart-icon-box .btn-besmart.btn-color-gray:hover,
+.section-infomation,
+.parallax2 .overlay {
+	background-color: #fff !important;
+}
+
+.roll-tabs .content-tab .content-inner .text-tab p,
+.besmart-icon-box .btn-besmart,
+.courses-tabs .content-tab .content-inner .text-tab ul li span,
+.infomation h3.mail,
+.instructors .toggle-content p {
+	color: #999;
+}
+
+.courses-tabs.type-border .menu-tab li:before {
+	background-color: #000;
+	opacity: 0.1;
+}
+
+.roll-carousel.courses-carousel .owl-controls .owl-nav .owl-prev, 
+.roll-carousel.courses-carousel .owl-controls .owl-nav .owl-next, 
+.roll-carousel.recent-carousel .owl-controls .owl-nav .owl-prev, 
+.roll-carousel.recent-carousel .owl-controls .owl-nav .owl-next {
+	border-color: #fff;
+}
+
+.roll-carousel.courses-carousel .owl-controls .owl-nav .owl-prev:before,
+.roll-carousel.recent-carousel .owl-controls .owl-nav .owl-prev:before {
+	background: url('../../images/icon/left_l.svg') no-repeat;
+	background-size: 20px 17px;
+}
+
+.roll-carousel.courses-carousel .owl-controls .owl-nav .owl-prev:hover:before,
+.roll-carousel.recent-carousel .owl-controls .owl-nav .owl-prev:hover:before,
+.gallery-carousel .owl-controls .owl-nav .owl-prev:hover:before  {
+	background: url('../../images/icon/left_2_h.svg') no-repeat;
+	background-size: 20px 17px;
+}
+
+.roll-carousel.courses-carousel .owl-controls .owl-nav .owl-next:before,
+.roll-carousel.recent-carousel .owl-controls .owl-nav .owl-next:before {
+	background: url('../../images/icon/right_l.svg') no-repeat;
+	background-size: 20px 17px;
+}
+
+.roll-carousel.courses-carousel .owl-controls .owl-nav .owl-next:hover:before,
+.roll-carousel.recent-carousel .owl-controls .owl-nav .owl-next:hover:before,
+.gallery-carousel .owl-controls .owl-nav .owl-next:hover:before {
+	background: url('../../images/icon/right_2_h.svg') no-repeat;
+	background-size: 20px 17px;
+}
+
+.instructors .toggle-title:after,
+.advantages-tabs ul.menu-tab li a,
+.instructors .toggle-title,
+.advantages-tabs ul.menu-tab li {
+	color: #5b5b5b;
+}
+
+.advantages-tabs ul.menu-tab li,
+.advantages-tabs .content-tab {
+	  box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.widget.widget-footer .widget-title,
+.widget.widget-recent-posts .recent-posts li .text p,
+.list-tiwtter .tweet_time:before,
+.roll-counter .item-counter span:before,
+.form-search .title-box h2,
+.page-about .about-us ul li a,
+.page-about .instructors h3,
+.page-about .about-us h3,
+.page-about .advantages-tabs h3,
+.page-about .popular-courses .title-box h3,
+.page-member .about-us ul li a,
+.page-member .instructors h3,
+.page-member .about-us h3,
+.page-member .advantages-tabs h3,
+.page-member .popular-courses .title-box h3 {
+	color: #656565 !important;
+}
+
+.footer {
+	background-color: #fafafa;
+}
+
+.contact-info li.icon-pins:before {
+  	background: url('../../images/icon/pin_b.png');
+  	background-size: 18px 19px;
+}
+
+.contact-info li.icon-phone:before {
+	background: url('../../images/icon/phone_b.png');
+  	background-size: 18px 19px;
+}
+
+.contact-info li.icon-fax:before {
+	background: url('../../images/icon/fax_b.png');
+  	background-size: 18px 19px;
+}
+
+.contact-info li.icon-email:before {
+	background: url('../../images/icon/email_b.png');
+  	background-size: 18px 19px;
+}

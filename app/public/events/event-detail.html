@@ -1,0 +1,97 @@
+<!-- Page Tile -->
+<section class="page-title">
+    <div class="container">
+        <div class="page-title-wrap text-center">
+            <h1 class="page-title-captions">Event Detail</h1>
+            <div class="breadcrumbs">
+                <!-- <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sign In Screen</a></li>
+                    <li>1 Column</li>
+                </ul>  -->                  
+            </div><!-- /.breadcrumbs -->
+        </div><!-- /.page-title-wrap -->
+    </div><!-- /.container -->        
+</section>
+
+<section id="sec-calendar" class="section ">
+    <br/>
+    <div class="container" ng-controller="EventDetailController">
+        <div class="row">
+                <div class="col-md-3">
+                    <div class="sidebar">
+                        <div class="widget widget-categories">
+                            <h5 class="widget-title">Categories</h5>
+                            <ul class="unstyled">
+                                <li ng-repeat="eventCategoryCount in eventCategories">
+                                    <a href="#">{{eventCategoryCount.name}}<span class="pull-right">({{eventCategoryCount.count}})</span></a>
+                                </li>
+                            </ul>
+                        </div><!-- /.widget-categories -->
+
+                        <div class="widget widget-popular-news">
+                            <h5 class="widget-title">Popular </h5>
+                            <ul class="popular-news clearfix">
+                                <li ng-repeat="event in popularEvents">
+                                    <div class="thumb">
+                                       <img src={{event.image}} alt="image">
+                                    </div>
+                                    <div class="text">
+                                        <p>{{event.date|date:'mediumDate'}}</p>
+                                        <h6>
+                                            <a href={{event.url}}>{{event.title}}  </a>
+                                        </h6>
+                                       
+                                    </div>
+                                </li>
+                            </ul><!-- /.popular-news -->
+                        </div><!-- /.widget-popular-news -->
+
+                    </div><!-- /.sidebar -->
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-9 padding-l110px">
+                    <article class="event-page-single">
+                        <div class="featured-post">
+                            <img src={{imageUrl}} alt="image"> 
+
+                        </div><!-- /.feature-post -->
+                        <div class="content-post">
+                            <h2 class="title-post">{{title}}</h2> 
+                            <ul class="meta-post besmart-socials clearfix">
+                                <li class="category">
+                                    {{category}}
+                                </li>                             
+                            </ul>
+
+                            <div class="entry-post">
+                                <h4>{{location}}</h4>
+                                <p>{{purpose}}</p> 
+                                <h4><span class="view"></span> Event Schedule</h4>
+                                <div class="event-schedule-div">
+                                    <table>
+                                        <tr class="animate-repeat" ng-repeat="schedule in eventSchedule | filter:q as results">
+                                            <td>
+                                                <span class="glyphicon glyphicon-calendar text-info"></span>
+                                            </td>
+                                            <td>
+                                            Event scheduled on <strong>{{schedule.dateTime | date:'MM/dd/yyyy @ h:mma'}}</strong> for <strong>{{schedule.duration}} hours.</strong>
+                                            </td>
+                                        </tr>
+                                        <tr class="animate-repeat" ng-if="results.length == 0">
+                                          <td><strong>No schedule found...</strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>   
+                        </div><!-- /.content-post -->
+                         <div class="submit-wrap">
+                                <a class="btn-besmart" ui-sref="register">Register Online</a>
+                                <a class="btn-besmart btn-color-gray" href="https://drive.google.com/file/d/0B8sIygehjhJrZFFLZTY0alpIRVU/view?usp=sharing" target="_blank">Download Registration Form</a>
+                            </div>
+                        </form>
+                    </article>                                  
+                </div><!-- /.col-md-9 -->
+        </div>
+    </div><!-- /.container -->
+</section> 

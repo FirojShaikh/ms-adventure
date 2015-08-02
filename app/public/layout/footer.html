@@ -1,0 +1,107 @@
+<!-- Footer -->
+<footer class="footer" ng-controller="FooterController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="widget widget-footer widget-recent-posts">
+                    <h5 class="widget-title">Popular Events </h5>
+                    <ul class="recent-posts clearfix">
+                        <li class="animate-repeat" ng-repeat="event in popularEvents">
+                            <div class="thumb">
+                                <img src={{event.image}} alt="image">
+                            </div>
+                            <div class="text">
+                                <h6><a href={{event.url}}>{{event.title}}</a></h6>
+                                <p>{{event.date | date:'mediumDate'}}</p>
+                            </div>
+                        </li>
+                    </ul><!-- /.recent-posts -->
+                </div><!-- /.widget-recent-posts -->
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <div class="widget widget-footer widget-recent-tweets">
+                    <h5 class="widget-title">Recent Tweets </h5>
+                    <div class="list-tiwtter">
+                        <a class="twitter-timeline" href="https://twitter.com/BRAVE_academy" data-widget-id="623336352600342528">Tweets by @BRAVE_academy</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </div>
+                </div><!-- /.widget-recent-tweets -->
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <div class="widget widget-footer widget-quick-contact" ng-controller="ContactController as vm">
+                    <h5 class="widget-title">Quick Contact </h5>
+                    <form class="contact-form" id="contactform" >
+                        <div class="note"></div>
+                        <div class="input-wrap name">
+                            <input type="text" value="" placeholder="Name*" ng-model="vm.name">
+                        </div>
+                        <div class="input-wrap email">
+                            <input type="text" value="" placeholder="E-mail*" ng-model="vm.email">
+                        </div>
+                        <div class="textarea-wrap">
+                            <textarea class="" placeholder="Your message*" ng-model="vm.message"></textarea>
+                        </div>
+                        <div class="submit-wrap">
+                            <button class="btn-besmart" ng-click="vm.submitContact()">Submit</button>
+                        </div>
+                    </form><!-- /.comment-form -->
+                     <div ng-show="vm.contactSuccess" class="alert alert-success">
+                            <span>We will contact you as soon as we can.</span>
+                        </div>
+                        <br/>
+                        <div ng-show="vm.contactFailed" class="alert alert-danger">
+                          <span>{{failedmessage}}</span>
+                        </div>
+                </div><!-- /.widget-quick-contact -->
+            </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</footer>
+
+<!-- Icon Box -->
+<section id="sec-iconbox" class="section section-iconbox">
+    <div class="wrap-icon-box clearfix">
+        <div class="one-three">        
+            <div class="besmart-icon-box margin-b70">
+                <span class="icon-book2"></span>
+                <h2>About</h2>
+                <p>Know more about us</p>                
+                <a ui-sref="about" class="btn-besmart btn-color-gray">About Page</a>
+            </div>                
+        </div><!-- /.one-three -->             
+        <div class="one-three">  
+            <div class="besmart-icon-box">
+                <span class="icon-pen"></span>
+                <h2>Events</h2>
+                <p>Check out our Events</p>
+                <div class="btn-iconbox">
+                    <a ui-sref="calendar" class="btn-besmart btn-color-gray">Events Page</a>
+                </div>                        
+            </div>                
+        </div><!-- /.one-three -->
+        <div class="one-three">   
+            <div class="besmart-icon-box margin-b25">
+                <span class="icon-image-outline"></span>
+                <h2>Donate</h2>
+                <p>Please Donate</p>
+                <div class="btn-iconbox">
+                    <a ui-sref="donate" class="btn-besmart btn-color-gray">Donation Page</a>
+                </div>                        
+            </div>                
+        </div><!-- /.one-three -->  
+    </div><!-- /.wrap-icon-box -->
+</section>     
+
+<!-- Bottom -->
+<div class="bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright text-center">
+                    <span><a href="#"><img src="images/logo.png" alt="image"></a></span>
+                    <p>Copyright © 2015 by BRAVE Academy</p>
+                </div>                   
+            </div><!-- /.span12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div>

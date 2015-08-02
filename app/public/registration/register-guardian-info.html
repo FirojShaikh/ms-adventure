@@ -1,0 +1,175 @@
+<!-- Page Tile -->
+<section class="page-title">
+    <div class="container">
+        <div class="page-title-wrap text-center">
+            <h1 class="page-title-captions">MAX ACHIEVEMENT PROGRAM (MAP)</h1>
+            <div class="breadcrumbs">
+                <!-- <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sign In Screen</a></li>
+                    <li>1 Column</li>
+                </ul>  -->                  
+            </div><!-- /.breadcrumbs -->
+        </div><!-- /.page-title-wrap -->
+    </div><!-- /.container -->        
+</section>
+
+<!-- About -->
+<section class="section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                    <div>
+                    <br>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-success" role="progressbar" style="width:20%">
+                            Student Information
+                          </div>
+                          <div class="progress-bar progress-bar-success" role="progressbar" style="width:20%">
+                            Parent/Guardian Information
+                          </div>
+                          <div class="progress-bar" role="progressbar" style="width:20%">
+                            Education Details
+                          </div>
+                          <div class="progress-bar" role="progressbar" style="width:20%">
+                            Additional Info
+                          </div>
+                          <div class="progress-bar" role="progressbar" style="width:20%">
+                            Conset
+                          </div>
+                        </div>
+                        <form id="contactform" method="post">
+                            <br>
+                            <fieldset>
+                                <legend>Parent/Guardian Information</legend>
+                                <div class="input-wrap">
+                                    <select class="form-control" required ng-model="map.ethnicity" tabindex="12">
+                                        <option value="">Student lives with</option>
+                                        <option value="MotherAndFather">Mother and Father</option>
+                                        <option value="TwoParents">Two Parents</option>
+                                        <option value="MotherOnly">Mother Only</option>
+                                        <option value="FatherOnly">Father Only</option>
+                                        <option value="AuntUncle">Aunt/Uncle</option>
+                                        <option value="GrandParents">Grand Parents</option>
+                                        <option value="Guardian">Guardian</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Please specify" name="otherstudentlivewith" id="otherstudentlivewith">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Guardian 1</label>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="First Name" name="firstName" id="firstName">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Last Name" name="lastName" id="lastName">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <select class="form-control" required ng-model="map.gender" tabindex="12">
+                                            <option value="">Select Guardian Type</option>
+                                            <option value="Mother">Mother</option>
+                                            <option value="Father">Father</option>
+                                            <option value="Aunt">Aunt</option>
+                                            <option value="Uncle">Uncle</option>
+                                            <option value="Grandmother">Grandmother</option>
+                                            <option value="Grandfather">Grandfather</option>
+                                            <option value="Brother">Brother</option>
+                                            <option value="Sister">Sister</option>
+                                            <option value="Guardian">Guardian</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <div class="radio">
+                                            <span>Is address same as student? </span>
+                                            <label><input type="radio" name="optradio">Yes</label>
+                                            <label><input type="radio" name="optradio">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Address" name="address" id="address">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="City" name="city" id="city">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="State" name="state" id="state">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Zip Code" name="zip" id="zip">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Home Phone" name="homephone" id="homephone">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Work Phone" name="workphone" id="workphone">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Cell Phone" name="cellphone" id="cellphone">
+                                    </div>
+                                    <br>
+                                    <label>Guardian 2</label>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="First Name" name="firstName" id="firstName">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Last Name" name="lastName" id="lastName">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <select class="form-control" required ng-model="map.gender" tabindex="12">
+                                            <option value="">Select Guardian Type</option>
+                                            <option value="Mother">Mother</option>
+                                            <option value="Father">Father</option>
+                                            <option value="Aunt">Aunt</option>
+                                            <option value="Uncle">Uncle</option>
+                                            <option value="Grandmother">Grandmother</option>
+                                            <option value="Grandfather">Grandfather</option>
+                                            <option value="Brother">Brother</option>
+                                            <option value="Sister">Sister</option>
+                                            <option value="Guardian">Guardian</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap">
+                                         <div class="radio">
+                                            <span>Is address same as student? </span>
+                                            <label><input type="radio" name="optradio">Yes</label>
+                                            <label><input type="radio" name="optradio">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Address" name="address" id="address">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="City" name="city" id="city">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="State" name="state" id="state">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Zip Code" name="zip" id="zip">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Home Phone" name="homephone" id="homephone">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Work Phone" name="workphone" id="workphone">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Cell Phone" name="cellphone" id="cellphone">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <br/>
+                            <div class="submit-wrap">
+                                <a class="btn-besmart" ui-sref="register-education-info">Next</a>
+                                <a class="btn-besmart btn-color-gray" ui-sref="calendar">Cancel</a>
+                            </div>
+                        </form>
+                    </div><!-- /.comment-respond -->
+                </div><!-- /.span -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section> 

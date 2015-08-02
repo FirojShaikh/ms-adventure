@@ -1,0 +1,66 @@
+ <div class="roll-slider" data-auto="true" data-effect="slide" data-direction="horizotal">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="images/slide/plain-slide.jpg" alt="image" class="roll-zoBackground">
+                    <div class="content-slider">
+                        <h3 class="title FromTop">BRAVE Academy Presents:</h3>
+                        <h1 class="sub-title"><span class="st-color roll-zoomOut">Programs,</span>  <span class="roll-zoomIn">Meetings</span> <span class="st-thin roll-bounceInDown">&amp;</span> <span class="st-thin roll-bounceOutDown">Conference Calls</span></h1>
+                        <p class="FromBottom"> Equip and empower African American youth to become entrepreneurs and excel in academic, personal, and civic leadership.</p>
+                        <!-- <a href="#" class="btn-besmart captionDelay3 FromLeft">Buy This Theme</a> -->
+                        <a ui-sref="calendar" class="btn-besmart captionDelay3 FromLeft">Know More</a>
+                    </div><!-- /.content-slider -->
+                </li>
+                <li>
+                    <img src="images/slide/plain-slide.jpg" alt="image" class="roll-ziBackground">
+                    <div class="content-slider">
+                        <h3 class="title FromBottom">Become:</h3>
+                        <h1 class="sub-title"><span class="st-color FromTop">Sponsor</span> <span class="st-thin FromLeft">/</span> <span class="FromRight">Facilitator</span> <span class="st-thin  captionDelay11 FromBottom">@ BRAVE Academy</span></h1>
+                        <p class="FromLeft">With your gift of time, talent or treasure, you can be a catalyst to empower a generation to rise to a higher level of excellence. It is our privilege to partner with individuals and organizations who see the value in our work and our promise to create a culture of learning, thriving and giving back.</p>
+                        <a href="#" class="btn-besmart captionDelay2 FromRight">Become Sponsor</a>
+                        <a href="#" class="btn-besmart captionDelay2 btn-trans FromLeft">Become Facilitator</a>
+                    </div><!-- /.content-slider -->
+                </li>
+                <li>
+                    <img src="images/slide/plain-slide.jpg" alt="image" class="roll-zoomOut">
+                    <div class="content-slider">
+                        <h3 class="title FromRight">Help Us:</h3>
+                        <h1 class="sub-title"><span class="st-color FromTop captionDelay2">Donate</span></h1>
+                        <p class="FromRight">YOU CAN HELP prepare students for the path toward college readiness, persistence, graduation and career success.</p>
+                        <a ui-sref="donate" class="btn-besmart FromLeft">Know More</a>
+                        <!-- <a href="#" class="btn-besmart btn-trans FromRight">Know More</a> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.roll-slider --> 
+
+    <script type="text/javascript">
+        $(function(){
+            var rollSlider = function() {
+                 if ( $('.flexslider') ) {
+                    $('.roll-slider').each(function() {
+                        var $this = $(this);
+                        var easing = ( $this.data('effect') == 'fade' ) ? 'linear' : 'easeInOutExpo';
+
+                        $this.find('.flexslider').flexslider({
+                           animation      :  $this.data('effect'),
+                           direction      :  $this.data('direction'), // vertical
+                           pauseOnHover   :  true,
+                           useCSS         :  false,
+                           easing         :  'easeInOutQuint',
+                           animationSpeed :  500,
+                           slideshowSpeed :  10000,
+                           controlNav     :  true,
+                           directionNav   :  true,
+                           slideshow      :  true,
+                           prevText       :  '<div class="slide-prev"></div>',
+                           nextText       :  '<div class="slide-next"></div>',
+                           smoothHeight   :  true
+                        }); // flexslider
+                    });
+                }
+            };
+            rollSlider();
+        });
+    </script>

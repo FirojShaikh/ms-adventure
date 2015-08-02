@@ -1,0 +1,147 @@
+<!-- Page Tile -->
+<section class="page-title">
+    <div class="container">
+        <div class="page-title-wrap text-center">
+            <h1 class="page-title-captions">MAX ACHIEVEMENT PROGRAM (MAP)</h1>
+            <div class="breadcrumbs">
+                <!-- <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sign In Screen</a></li>
+                    <li>1 Column</li>
+                </ul>  -->                  
+            </div><!-- /.breadcrumbs -->
+        </div><!-- /.page-title-wrap -->
+    </div><!-- /.container -->        
+</section>
+
+<!-- About -->
+<section class="section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                    <div>
+                    <br>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" style="width:20%">
+                        Student Information
+                      </div>
+                      <div class="progress-bar" role="progressbar" style="width:20%">
+                        Parent/Guardian Information
+                      </div>
+                      <div class="progress-bar" role="progressbar" style="width:20%">
+                        Education Details
+                      </div>
+                      <div class="progress-bar" role="progressbar" style="width:20%">
+                        Additional Info
+                      </div>
+                      <div class="progress-bar" role="progressbar" style="width:20%">
+                        Conset
+                      </div>
+                    </div>
+                        <form id="contactform" method="post">
+                            <fieldset>
+                                <legend>Student Information</legend>
+                                <div  class="col-md-5">
+                                    <div class="input-wrap">
+                                        <input type="text" value="" required tabindex="1" placeholder="First Name" name="firstName" id="firstName">
+                                        <input type="text" value="" required tabindex="1" placeholder="M. I." name="mi" id="mi">
+                                         <input type="text" value="" required tabindex="1" placeholder="Last Name" name="lastName" id="lastName">
+                                     </div>
+                                    <div class="input-wrap">
+                                        <select class="form-control" required ng-model="map.gender" tabindex="12">
+                                            <option value="">Select Gender</option>
+                                            <option value="F">Female</option>
+                                            <option value="M">Male</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" value="" tabindex="15" placeholder="Date of Birth" name="dateofbirth" id="date" datepicker-popup="MMM dd, yyyy" is-open="opened" ng-model="map.dateofbirth"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default openCalendar" ng-click="open($event)">
+                                                    <i class="glyphicon glyphicon-calendar" />
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="STN (8 digit school ID)" name="stn" id="stn">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <select class="form-control" required ng-model="map.ethnicity" tabindex="12">
+                                            <option value="">Select Ethnicity</option>
+                                            <option value="Caucasian">Caucasian</option>
+                                            <option value="African-American">African-American</option>
+                                            <option value="Hispanic-American">Hispanic-American</option>
+                                            <option value="Native-American">Native-American</option>
+                                            <option value="Asian-American">Asian-American</option>
+                                            <option value="Hispanic-American">Hispanic-American</option>
+                                            <option value="Multi-Racial">Multi-Racial</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Please specify" name="otherethnicity" id="otherethnicity">
+                                    </div>
+                                    <div class="input-wrap email">
+                                        <input type="email" value="" required tabindex="1" placeholder="email" name="email" id="email">
+                                    </div>
+                                </div>
+                                <!-- <div class="input-wrap text">
+                                    <input type="text" value="" required tabindex="1" placeholder="M. I." name="mi" id="mi">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" value="" required tabindex="1" placeholder="Last Name" name="lastName" id="lastName">
+                                </div> -->
+                                <div class="col-md-5">
+                                   
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Address" name="address" id="address">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="City" name="city" id="city">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="State" name="state" id="state">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Zip Code" name="zip" id="zip">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Cell Phone" name="cellphone" id="cellphone">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Twitter Handle @" name="twitterhandle" id="twitterhandle">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" value="" required tabindex="1" placeholder="Facebook Page" name="facebookpage" id="facebookpage">
+                                    </div>
+                                     <div class="input-wrap">
+                                        <select class="form-control" required ng-model="map.ethnicity" tabindex="12">
+                                            <option value="">Select T-Shirt Size</option>
+                                            <option value="XS">XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                            <option value="2XL">2XL</option>
+                                            <option value="3XL">3XL</option>
+                                            <option value="4XL">4XL</option>
+                                            <option value="5XL">5XL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br>
+                            <br>
+                            <div class="submit-wrap">
+                                <a class="btn-besmart" ui-sref="register-guardian-info">Next</a>
+                                <a class="btn-besmart btn-color-gray" ui-sref="calendar">Cancel</a>
+                            </div>
+                        </form>
+                    </div><!-- /.comment-respond -->
+                </div><!-- /.span -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section> 

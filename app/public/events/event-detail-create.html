@@ -1,0 +1,142 @@
+<!-- Page Tile -->
+<section class="page-title">
+    <div class="container">
+        <div class="page-title-wrap text-center">
+            <h1 class="page-title-captions">Create Event</h1>
+            <div class="breadcrumbs">
+                <!-- <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sign In Screen</a></li>
+                    <li>1 Column</li>
+                </ul>  -->                  
+            </div><!-- /.breadcrumbs -->
+        </div><!-- /.page-title-wrap -->
+    </div><!-- /.container -->        
+</section>
+
+<!-- About -->
+<section id="sec-calendar" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                    <div ng-controller="EventsController">
+                        <br/>
+                        <div ng-show="showEventCreatedMessage">
+                            <h3>Event created successfully..!</h3>
+                        </div>
+                        <div ng-show="!showEventCreatedMessage">
+                            <h4>Event details</h4>
+                            <form id="contactform">
+                                <div class="input-wrap">
+                                    <input type="text" value="" required tabindex="11" placeholder="Title" name="title" id="title" ng-model="event.title" />
+                                </div>
+                                <div class="input-wrap">
+                                    <select class="form-control" required ng-model="event.category" tabindex="12">
+                                        <option value="">Select Category</option>
+                                        <option value="Meeting">Meeting</option>
+                                        <option value="Conference call">Conference call</option>
+                                        <option value="Program">Program</option>
+                                    </select>
+                                </div>
+                                <div class="textarea-wrap">
+                                	<textarea placeholder="Purpose/Description" required tabindex="13" name="purpose" id="purpose" ng-model="event.purpose"></textarea>
+                            	</div>
+                                <div class="input-wrap">
+                                    <input type="text" required tabindex="14" placeholder="Location" name="Location" id="location" ng-model="event.location" />
+                                </div>
+                                <div class="input-wrap">
+                                    <h4>Event Schedule</h4>
+                                	<div class="input-group">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input class="form-control" type="text" value="" tabindex="15" placeholder="Starts" name="date" id="date" datepicker-popup="MMM dd, yyyy" is-open="opened" ng-model="event.schedule.dateTime"/>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-default openCalendar" ng-click="open($event)">
+                                                        <i class="glyphicon glyphicon-calendar" />
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <timepicker ng-model="event.schedule.dateTime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+                                                </td>
+                                                <td>
+                                                    <input class="form-control" type="text" value="" tabindex="15" placeholder="Duration in hours"
+                                                    ng-model="event.schedule.duration"/>
+                                                   
+                                                </td>
+                                                <td>
+                                                    <button class="btn-besmart" ng-click="addEventSchedule($event,event.schedule)">
+                                                        Add
+                                                    </button>
+                                                </td>
+                                                </tr>
+                                        </table>
+                                    	<div class="event-schedule-div">
+                                            <table>
+                                                <tr class="animate-repeat" ng-repeat="schedule in eventSchedule | filter:q as results">
+                                                    <td>
+                                                     Event scheduled on <strong>{{schedule.dateTime | date:'MM/dd/yyyy @ h:mma'}}</strong> for <strong>{{schedule.duration}} hours.</strong>
+                                                    </td>
+                                                    <td style="padding-left:50px;">
+                                                        <button class="btn btn-danger btn-xs" type="button" ng-click="removeEventSchedule($event,schedule)"><span class="glyphicon glyphicon-trash"></span></button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="animate-repeat" ng-if="results.length == 0">
+                                                  <td><strong>No schedule found...</strong></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div 
+                                    flow-init="{singleFile:true}" 
+                                    flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+                                    flow-files-submitted="$flow.upload()"
+                                    flow-complete="uploadComplete($flow.files[0])">
+
+                                    <h4>Upload event image</h4>
+                                        
+                                    <!-- <p>{{selectedFileName}}</p> -->
+                                    <div class="thumbnail" ng-show="!$flow.files.length">
+                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image">
+                                    </div>
+                                    <div class="thumbnail ng-hide" ng-show="$flow.files.length">
+                                        <img flow-img="$flow.files[0]">
+                                    </div>
+                                    <div>
+                                      <span class="btn btn-primary" ng-show="!$flow.files.length" flow-btn="" tabindex="16">
+                                        Select event image
+                                        <input type="file" style="visibility: hidden; position: absolute;"/>
+                                      </span>
+                                      <span class="btn btn-info ng-hide" ng-show="$flow.files.length" flow-btn="">      Change
+                                        <input type="file" style="visibility: hidden; position: absolute;" />
+                                      </span>
+                                      <span class="btn btn-danger ng-hide" ng-show="$flow.files.length" ng-click="  $flow.cancel();cancelUpload();"> Remove
+                                      </span>
+                                    </div>
+                                    <p>
+                                      Only PNG,GIF,JPG,JEPG files allowed.
+                                    </p>
+                                </div>
+
+                                <div class="submit-wrap">
+                                    <button class="btn-besmart" ng-click="createEvent(event)" tabindex="17">
+                                        Create
+                                    </button>
+                                    <button class="btn-besmart btn-color-gray" ui-sref="calendar" tabindex="18">Cancel</button> 
+                                </div>
+                            </form>
+                            <br/>
+                            <div ng-show="isAuthenticationFailed" class="alert alert-danger">
+                              <span>You are not authorized to create event. Please contact site administrator.</span>
+                            </div>
+                        </div>
+                    </div><!-- /.comment-respond -->
+                    <br/>
+            </div><!-- /.span -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section> 

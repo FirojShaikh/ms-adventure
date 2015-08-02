@@ -1,0 +1,117 @@
+<!-- Page Tile -->
+<section class="page-title">
+    <div class="container">
+        <div class="page-title-wrap text-center">
+            <h1 class="page-title-captions">Contact Us</h1>
+            <div class="breadcrumbs">
+                <!-- <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sign In Screen</a></li>
+                    <li>1 Column</li>
+                </ul>  -->                  
+            </div><!-- /.breadcrumbs -->
+        </div><!-- /.page-title-wrap -->
+    </div><!-- /.container -->        
+</section>
+
+
+<section id="sec-map" class="section contact-map">
+        <div id="map" style="width: 100%; height: 500px;"></div>
+    </section>
+
+    <section id="sec-calendar" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="comment-respond" ng-controller="ContactController as vm">
+                        <h4 class="title">Contact Form</h4>
+                        <form class="contact-form" id="contactform">
+                            <div class="note"></div>
+                            <div class="input-wrap name">
+                                <input type="text" value="" tabindex="1" placeholder="Name*" ng-model="vm.name">
+                            </div>
+                            <div class="input-wrap email">
+                                <input type="text" value="" tabindex="2" placeholder="E-mail*" ng-model="vm.email">
+                            </div>
+                            <div class="input-wrap subject">
+                               <input type="text" value="" tabindex="3" placeholder="Subject" ng-model="vm.subject">
+                            </div>
+                            <div class="textarea-wrap">
+                                <textarea class="" tabindex="4" placeholder="Your message*" ng-model="vm.message"></textarea>
+                            </div>
+                            <div class="submit-wrap">
+                                <button class="btn-besmart" ng-click="vm.submitContact()">Submit</button>
+                            </div>
+                        </form>
+                        <div ng-show="vm.contactSuccess" class="alert alert-success">
+                            <span>Your contact details received successfully. We will contact you as soon as we can.</span>
+                        </div>
+                        <br/>
+                        <div ng-show="vm.contactFailed" class="alert alert-danger">
+                          <span>{{failedmessage}}</span>
+                        </div>
+                    </div><!-- /.comment-respond -->
+                </div><!-- /.span -->
+
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <h4 class="title">Contact Info</h4>
+                        <ul>
+                           <!--  <li class="icon-pins">
+                                <span class="if-title">Postal Address:</span>PO Box 97845 Baker st. 567, Los Angeles, California, United States
+                            </li>
+                            <li class="icon-phone">
+                                <span class="if-title">Phone:</span>8 (800) 659-2684
+                            </li>
+                            <li class="icon-fax">
+                                <span class="if-title">Fax:</span>8 (800) 659-2676
+                            </li> -->
+                            <li class="icon-email">
+                                <span class="if-title">Email:</span>info@braveacademy.org
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- /.span2 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- Courses infomation -->
+    <section id="sec-info" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"> 
+                    <div class="infomation text-center">
+                        <h1 class="phone">info@braveacademy.org</h3>
+                        <!-- <h1 class="phone">8 (800) 695-2684</h1>
+                        <h4 class="address">Santa Monica Blvd, Los Angeles, Clifornia 97845, United States</h4> -->
+                    </div><!-- /infomation -->                
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>  
+
+    <script type="text/javascript">
+        $(function(){
+
+            // Gmap
+            var gmapSetup = function() {
+                if ( $().goMap ) {
+                    $("#map").goMap({ // load map
+                        markers: [{  
+                            address: 'Nashville, TN 37204', 
+                            title: 'braveacademy',
+                        }],
+                        scrollwheel: false, 
+                        disableDoubleClickZoom: false,
+                        zoom: 15,
+                        maptype: 'ROADMAP'
+                    });
+                }
+            };
+
+            gmapSetup();
+
+        });
+    </script>

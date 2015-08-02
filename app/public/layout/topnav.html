@@ -1,0 +1,77 @@
+<div class="top">
+    	<div class="content-header">
+            <div class="one-half">
+                <ul class="contact-info inline pull-left">
+                    <!-- <li class="phone"><a href="#">8-800-123-4567</a></li> -->
+                    <li class="email"><a href="#">info@braveacademy.org</a></li>                    
+                </ul>
+            </div><!-- /.one-half --> 
+            <div class="one-half" ng-controller="AuthenticationController">
+                <ul class="contact-info inline pull-right clearfix">
+                    <li ><a ui-sref="documents">Documents </a></li>
+                    <!-- <li ><a ui-sref="facilitator">Facilitate </a></li> -->
+                    <li ><a ui-sref="registration">Register </a></li>
+                    <li class="singin" ng-show="!isAuthenticated"><a ui-sref="signin">Sign In </a></li>
+                    <li class="admin" ng-show="isAuthenticated">Hello {{displayName}}! </li> 
+                    <li class="singin" ng-show="isAuthenticated"><a ui-sref="home" ng-click="signOut()">Sign Out </a></li> 
+                   <!--  <li class="search"><a href="#"><span class="icon-zoom-outline"></span></a></li>  -->
+                </ul>
+            </div><!-- /.one-half --> 
+        </div><!-- /.content-header --> 
+    </div><!-- /.top --> 
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-wrap">
+    		<div class="content-header">
+                <div id="logo" class="logo">
+                    <a ui-sref="home" rel="home">
+                        <img src="images/logo.png" alt="image">
+                    </a>
+                </div><!-- /.logo -->
+                <div class="wrap-nav">
+                    <div class="btn-menu"></div><!-- //mobile menu button -->
+                    <nav id="mainnav" class="mainnav" ng-controller="TopnavController">
+                        <ul class="menu"> 
+                            <li ng-class="{ active: isActive('/home')}">
+                                <a ui-sref="home">Home</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/calendar')}">
+                                <a ui-sref="calendar">Calendar</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/sponsorship')}">
+                                <a ui-sref="sponsorship">Sponsors</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/donate')}">
+                                <a ui-sref="donate">Donate</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/about')}">
+                                <a ui-sref="about">About</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/contact')}">
+                                <a ui-sref="contact">Contact</a>
+                            </li>
+                        </ul><!-- /.menu -->
+                    </nav><!-- /.mainnav -->
+                </div><!-- /.wrap-nav -->
+                <div class="wrap-social clearfix">                
+                    <ul class="besmart-socials">
+                        <li><a href="#"><span class="icon-social facebook">F</span></a></li>
+                        <li><a href="#"><span class="icon-social twitter">L</span></a></li>
+                        <li><a href="#"><span class="icon-social">G</span></a></li>             
+                        <li><a href="#"><span class="icon-social linkedin">I</span></a></li>
+                        <li><a href="#"><span class="icon-social pinterest">:</span></a></li>
+                    </ul> 
+                </div><!-- /.social-wrap -->
+            </div><!-- /.content-header -->
+        </div><!-- /.header-wrap -->
+    </header><!-- /.header -->
+
+    <div class="top-search">
+        <div class="content-header">
+           <!--  <input type="text" class="ts-search" placeholder="Type Keywords Here...">
+            <a href="#"><span class="icon-zoom-outline"></span></a> -->
+        </div><!-- /.content-header -->
+    </div><!-- /.top-search -->
+
+    <div ui-view="home-roll-slider-view" ng-init="alert('Hello Init');"></div>

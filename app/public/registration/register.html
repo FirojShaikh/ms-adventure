@@ -1,0 +1,460 @@
+<!-- Page Tile -->
+<section class="page-title">
+    <div class="container">
+        <div class="page-title-wrap text-center">
+            <h1 class="page-title-captions">MAX ACHIEVEMENT PROGRAM (MAP)</h1>
+            <div class="breadcrumbs">
+                <!-- <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sign In Screen</a></li>
+                    <li>1 Column</li>
+                </ul>  -->                  
+            </div><!-- /.breadcrumbs -->
+        </div><!-- /.page-title-wrap -->
+    </div><!-- /.container -->        
+</section>
+
+<!-- About -->
+<section id="sec-calendar" class="section">
+    <div class="container" ng-controller="RegistrationController as vm">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                    <div >
+                        <br>
+                        <form id="contactform">
+                            <fieldset>
+                                <legend>Student Information</legend>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="11" placeholder="First Name" ng-model="vm.firstName">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="12" placeholder="Middle Initial" ng-model="vm.mi">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="13" placeholder="Last Name" ng-model="vm.lastName">
+                                </div>
+                                <div class="input-wrap">
+                                    <select class="form-control" ng-model="vm.gender" tabindex="14">
+                                        <option value="">Select Gender</option>
+                                        <option value="F">Female</option>
+                                        <option value="M">Male</option>
+                                    </select>
+                                </div>
+                                 <div class="input-wrap">
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" tabindex="15" placeholder="Date of Birth" datepicker-popup="MMM dd, yyyy" is-open="vm.dobCalendarOpened" ng-model="vm.dateOfBirth"/>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default openCalendar" tabindex="16" ng-click="vm.openDobCalendar($event)">
+                                                <i class="glyphicon glyphicon-calendar" />
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="17" placeholder="STN (8 digit school ID)" ng-model="vm.stn">
+                                </div>
+                                <div class="input-wrap">
+                                    <select class="form-control"  ng-model="vm.ethinicity" tabindex="18">
+                                        <option value="">Select Ethnicity</option>
+                                        <option value="Caucasian">Caucasian</option>
+                                        <option value="African-American">African-American</option>
+                                        <option value="Hispanic-American">Hispanic-American</option>
+                                        <option value="Native-American">Native-American</option>
+                                        <option value="Asian-American">Asian-American</option>
+                                        <option value="Hispanic-American">Hispanic-American</option>
+                                        <option value="Multi-Racial">Multi-Racial</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrap text" ng-show="vm.ethinicity=='Other'">
+                                    <input type="text" tabindex="19" placeholder="Please specify" ng-model="vm.otherEthinicity">
+                                </div>
+                                <div class="input-wrap email">
+                                    <input type="email" tabindex="20" placeholder="email" ng-model="vm.email">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="21" placeholder="Address" ng-model="vm.address">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="22" placeholder="City" ng-model="vm.city">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="23" placeholder="State" ng-model="vm.state">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="24" placeholder="Zip Code" ng-model="vm.zip">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="25" placeholder="Cell Phone" ng-model="vm.cellPhone">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="26" placeholder="Twitter Handle @" ng-model="vm.twitterHandle">
+                                </div>
+                                <div class="input-wrap text">
+                                    <input type="text" tabindex="27" placeholder="Facebook Page" ng-model="vm.facebookPage">
+                                </div>
+                                 <div class="input-wrap">
+                                    <select class="form-control" ng-model="vm.tshirtSize" tabindex="28">
+                                        <option value="">Select T-Shirt Size</option>
+                                        <option value="XS">XS</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="2XL">2XL</option>
+                                        <option value="3XL">3XL</option>
+                                        <option value="4XL">4XL</option>
+                                        <option value="5XL">5XL</option>
+                                    </select>
+                                </div> 
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend>Parent/Guardian Information</legend>
+                                <div class="input-wrap">
+                                    <select class="form-control"  ng-model="vm.studenLiveWith" tabindex="29">
+                                        <option value="">Student lives with</option>
+                                        <option value="MotherAndFather">Mother and Father</option>
+                                        <option value="TwoParents">Two Parents</option>
+                                        <option value="MotherOnly">Mother Only</option>
+                                        <option value="FatherOnly">Father Only</option>
+                                        <option value="AuntUncle">Aunt/Uncle</option>
+                                        <option value="GrandParents">Grand Parents</option>
+                                        <option value="Guardian">Guardian</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="30" placeholder="Please specify"
+                                        ng-show="vm.studentLiveWith=='Other'">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Guardian 1</label>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="31" placeholder="First Name" ng-model="vm.guardian1.firstName">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="32" placeholder="Last Name" ng-model="vm.guardian1.lastName">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <select class="form-control"  ng-model="vm.guardian1.guardianType" tabindex="33">
+                                            <option value="">Select Guardian Type</option>
+                                            <option value="Mother">Mother</option>
+                                            <option value="Father">Father</option>
+                                            <option value="Aunt">Aunt</option>
+                                            <option value="Uncle">Uncle</option>
+                                            <option value="Grandmother">Grandmother</option>
+                                            <option value="Grandfather">Grandfather</option>
+                                            <option value="Brother">Brother</option>
+                                            <option value="Sister">Sister</option>
+                                            <option value="Guardian">Guardian</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap">
+                                         <div class="radio">
+                                            <span>Is address same as student? </span>
+                                            <label><input type="radio" name="guardian1.optradioSameAddress" value="yes" ng-model="vm.guardian1.haveSameAddressWithStudent" tabindex="34">Yes</label>
+                                            <label><input type="radio" name="guardian1.optradioSameAddress" value="no" ng-model="vm.guardian1.haveSameAddressWithStudent" tabindex="35">No</label>
+                                        </div>
+                                    </div>
+                                    <div ng-show="vm.guardian1.haveSameAddressWithStudent=='no'">
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="36" placeholder="Address" ng-model="vm.guardian1.address">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="37" placeholder="City" ng-model="vm.guardian1.city">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="38" placeholder="State" ng-model="vm.guardian1.state">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="39" placeholder="Zip Code" ng-model="vm.guardian1.zip">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="40" placeholder="Home Phone" ng-model="vm.guardian1.homePhone">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="41" placeholder="Work Phone" ng-model="vm.guardian1.workPhone">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="42" placeholder="Cell Phone" ng-model="vm.guardian1.cellPhone">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <label>Guardian 2</label>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="43" placeholder="First Name" ng-model="vm.guardian2.firstName">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="44" placeholder="Last Name" ng-model="vm.guardian2.lastName">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <select class="form-control"  ng-model="vm.guardian2.guardianType" tabindex="45">
+                                            <option value="">Select Guardian Type</option>
+                                            <option value="Mother">Mother</option>
+                                            <option value="Father">Father</option>
+                                            <option value="Aunt">Aunt</option>
+                                            <option value="Uncle">Uncle</option>
+                                            <option value="Grandmother">Grandmother</option>
+                                            <option value="Grandfather">Grandfather</option>
+                                            <option value="Brother">Brother</option>
+                                            <option value="Sister">Sister</option>
+                                            <option value="Guardian">Guardian</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap">
+                                         <div class="radio">
+                                            <span>Is address same as student? </span>
+                                            <label><input type="radio" name="guardian2.optradioSameAddress" value="yes" ng-model="vm.guardian2.haveSameAddressWithStudent" tabindex="46">Yes</label>
+                                            <label><input type="radio" name="guardian2.optradioSameAddress" value="no" ng-model="vm.guardian2.haveSameAddressWithStudent" tabindex="47">No</label>
+                                        </div>
+                                    </div>
+                                    <div ng-show="vm.guardian2.haveSameAddressWithStudent=='no'">
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="48" placeholder="Address" ng-model="vm.guardian2.address">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="49" placeholder="City" ng-model="vm.guardian2.city">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="50" placeholder="State" ng-model="vm.guardian2.state">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="51" placeholder="Zip Code" ng-model="vm.guardian2.zip">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="52" placeholder="Home Phone" ng-model="vm.guardian2.homePhone">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="53" placeholder="Work Phone" ng-model="vm.guardian2.workPhone">
+                                        </div>
+                                        <div class="input-wrap text">
+                                            <input type="text" tabindex="54" placeholder="Cell Phone" ng-model="vm.guardian2.cellPhone">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <fieldset>
+                                <legend>Educational Information</legend>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="55" placeholder="Current complete school name" ng-model="vm.currentSchoolName">
+                                    </div>
+                                    <div class="radio">
+                                        <span>Current Grade </span>
+                                        <label><input type="radio" name="grdradio" tabindex="56" ng-model="vm.currentGrade" value="10">10</label>
+                                        <label><input type="radio" name="grdradio" tabindex="57" ng-model="vm.currentGrade" value="11">11</label>
+                                        <label><input type="radio" name="grdradio" tabindex="58" ng-model="vm.currentGrade" value="12">12</label>
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="59" placeholder="H.S. Graduation Year" ng-model="vm.hsGraduationYear">
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="60" placeholder="GPA" ng-model="vm.gpa">
+                                    </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Career Interest</legend>
+                                <div class="checkbox">
+                                    <div class="col-md-5">
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="61" ng-model="vm.careerInterest.accountingOrFinance" value="">Accounting/Finance
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" ng-model="vm.careerInterest.architectureOrConstruction" tabindex="62" value="architectureOrConstruction">Architecture/Construction 
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="63" ng-model="vm.careerInterest.businessOrEnterpreneurship" value="businessOrEnterpreneurship">Business/Enterpreneurship 
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="64" ng-model="vm.careerInterest.communicationOrMedia" value="communicationOrMedia">Communication/Media
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="65" ng-model="vm.careerInterest.computerInformationTechnology" value="computerInformationTechnology">Computer/Information Technology 
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="66" ng-model="vm.careerInterest.education" value="Education">Education
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="67" ng-model="vm.careerInterest.engineering" value="engineering">Engineering
+                                        </label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="68" ng-model="vm.careerInterest.law" value="law">Law
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="69" ng-model="vm.careerInterest.medicalField" value="medicalField">Medical Field
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="70" ng-model="vm.careerInterest.performingArtsOrCreativeCareers" value="performingArtsOrCreativeCareers">Performing Arts/Creative Careers
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="71" ng-model="vm.careerInterest.sports" value="sports">Sports
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="72" ng-model="vm.careerInterest.other" value="other">Other
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="73" ng-model="vm.careerInterest.undecided" value="undecided">Undecided
+                                        </label>
+                                    </div>
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="74" ng-model="vm.specificCareerField" placeholder="Specific career field">
+                                    </div>    
+                            </fieldset>
+                            <br/>
+                            <fieldset>
+                                <legend>Program Information</legend>
+                                    <div class="radio">
+                                        <span>First time in ELI </span>
+                                        <label><input type="radio" ng-model="vm.firstTimeELI" tabindex="75" value="yes">Yes</label>
+                                        <label><input type="radio" ng-model="vm.firstTimeELI" tabindex="76" value="no">No</label>
+                                    </div>
+                                    <div class="checkbox">
+                                         <span>If yes, how did you hear about us? </span>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="77" ng-model="vm.howDidYouHear.alumni">Alumni
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="78" ng-model="vm.howDidYouHear.cldEvent">CLD Event
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="79" ng-model="vm.howDidYouHear.church">Church 
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="80" 
+                                            ng-model="vm.howDidYouHear.communityEventOrOrganization">Community Event/Organization
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="81" ng-model="vm.howDidYouHear.newspaper">Newspaper
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="82" ng-model="vm.howDidYouHear.radio">Radio
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="83" ng-model="vm.howDidYouHear.school">School
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="84" ng-model="vm.howDidYouHear.socialMedia">Social Media
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="85" ng-model="vm.howDidYouHear.tv">TV
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="86" ng-model="vm.howDidYouHear.walkIn">Walk-in
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="87" ng-model="vm.howDidYouHear.website">Website
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="88" ng-model="vm.howDidYouHear.other">Other
+                                        </label>
+                                    </div>
+                                    <div class="input-wrap text" ng-show="vm.howDidYouHear.other==true">
+                                        <input type="text" tabindex="89" placeholder="If other, please specify" ng-model="vm.howDidYouHearOtherWay">
+                                    </div>
+                            </fieldset>
+                            <br/>
+                            <fieldset>
+                                <legend>Confidential Information</legend>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="90" placeholder="Total Number of individuals living in household" ng-model="vm.numberOfIndividualsInHousehold">
+                                    </div>
+                                    <div class="radio">
+                                        <span>Annual Household Income </span>
+                                        <label class="radio">
+                                            <input type="radio" tabindex="91" ng-model="vm.anualHouseholIncome" value="0">$0-$9,999
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" tabindex="92" ng-model="vm.anualHouseholIncome" value="10000">$10,000-$19,999
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" tabindex="93" ng-model="vm.anualHouseholIncome" value="20000">$20,000-$29,999
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" tabindex="94" ng-model="vm.anualHouseholIncome" value="30000">$30,000-$39,999
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" tabindex="95" ng-model="vm.anualHouseholIncome" value="40000">$40,000-$49,999
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" tabindex="96" ng-model="vm.anualHouseholIncome" value="50000">$50,000+
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <span>Check All Programs that Apply </span>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="97" ng-model="vm.programs.tanf">TANF
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="98" ng-model="vm.programs.foodStamps">Food Stamps
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="99" ng-model="vm.programs.medicaid">Medicaid
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="100" ng-model="vm.programs.ssi">SSI
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="101" ng-model="vm.programs.ssdi">SSDI
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="102" ng-model="vm.programs.veteransCompensation">Veteran's Compensation
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" tabindex="103" ng-model="vm.programs.none">None
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <span>Does your child receive Free or Reduced lunch? </span>
+                                        <label><input type="radio" tabindex="104" ng-model="vm.childReceiveFreeOrReducedLunch" value="yes">Yes</label>
+                                        <label><input type="radio" tabindex="105" ng-model="vm.childReceiveFreeOrReducedLunch" value="no">No</label>
+                                    </div>
+                            </fieldset>
+                            <br/>
+                            <fieldset>
+                                <legend>Parent/Guardian Conset</legend>
+                                    <div class="well">
+                                        <small>I hereby give permission for my child, named above, to attend and participate in Center for Leadership Development’s (CLD) programs, activities, and initiatives. For the purposes of marketing CLD programs, I hereby give permission for my child to be photographed and/or video graphed. Any data collected by CLD from various vehicles is private and confidential. Data may include, but is not limited to: ISTEP scores, CTBS, and standardized testing covered by FERPA, as well as grades, school attendance records, behavioral records and log sheets. It is also understood that data collected will protect my child’s identity, although CLD, its assigns, or successors
+                                        may use the data to determine current trends. The data collected is the sole property of CLD. I amhe natural parent or legal guardian having custody of said child. In consideration of my child participating in CLD, I hereby voluntarily release and agree to hold harmless and indemnify the Center for Leadership Development (CLD), each of its directors, officers, employees, volunteers, and its partner organizations from and against any and all liability, claims, demands, actions, damages, expenses and costs, including attorney’s fees, losses and judgments of whatsoever kind and nature which may result from or arise out of my child’s participation whether or not resulting in whole or in part from negligence, acts or omissions of CLD or its directors, officers, employees, volunteers, or partner organizations, or of said child. In the event that I cannot be reached in an emergency, I hereby give permission to the CLD staff/volunteer(s) to order x-rays, routine tests, treatment, to release any records necessary for insurance purposes, and to provide or arrange necessary related transportation for my child. In the event that I cannot be reached in an emergency, I hereby give permission to the physician or nurse selected by the CLD staff/volunteer(s) to secure and administer treatment, including hospitalization, for the youth listed above. I do hereby agree to hold free from any and all liability all respective officers, employees, and members. I hereby on behalf of my child waive, release, and forever discharge any and all rights and claims for damages which my child may have or may not have accrue arising out of or connected with my child in any of the activities of the CLD</small>
+                                    </div>
+                                    <div class="radio">
+                                        <span>I agree </span>
+                                        <label><input type="radio" tabindex="106" ng-model="vm.agreed" value="yes">Yes</label>
+                                        <label><input type="radio" tabindex="107" ng-model="vm.agreed" value="no">No</label>
+                                    </div>
+                                    <div class="input-wrap text">
+                                        <input type="text" tabindex="108" placeholder="Print Name" ng-model="vm.printName">
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" placeholder="Date" name="dateofbirth" id="date" datepicker-popup="MMM dd, yyyy" is-open="vm.printDateCalendarOpened" ng-model="vm.printDate" tabindex="109"  />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default openCalendar" ng-click="vm.openPrintDateCalendar($event)" tabindex="110" >
+                                                <i class="glyphicon glyphicon-calendar" />
+                                            </button>
+                                        </span>
+                                    </div>
+                            </fieldset>
+                            <br>
+                            <div class="submit-wrap">
+                                <button class="btn-besmart" tabindex="111" ng-click="vm.register()">Complete Registeration</button>
+                                <button class="btn-besmart btn-color-gray" ui-sref="calendar" tabindex="112" >Cancel</button>
+                            </div>
+                        </form>
+                        <div ng-show="registrationSuccessful">
+                            <p> <lead>You are almost done.</lead> Please pay registration fees here.</p>
+                            <br>
+                            <h5> *** Paypal payment control placeholder ***</h5>
+                        </div>
+                        <br/>
+                        <div ng-show="registrationFailed" class="alert alert-danger">
+                          <span>{{failedmessage}}</span>
+                        </div>
+                    </div><!-- /.comment-respond -->
+                </div><!-- /.span -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section> 
